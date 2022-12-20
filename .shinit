@@ -1,0 +1,21 @@
+#!/bin/sh -e
+
+## ash
+
+cat ~/.cache/wal/sequences
+export PS1="\u \W > "
+
+## cflags
+export CFLAGS="-march=native -pipe -Og"
+export CXXFLAGS="-march=native -pipe -Og"
+export MAKEFLAGS="-j8"
+
+## repositorios
+export KISS_PATH=''
+KISS_PATH=$KISS_PATH:/var/db/kiss/repo/bin
+KISS_PATH=$KISS_PATH:/var/db/kiss/repo/core
+KISS_PATH=$KISS_PATH:/var/db/kiss/repo/extra
+KISS_PATH=$KISS_PATH:/var/db/kiss/repo/xorg
+KISS_PATH=$KISS_PATH:/var/db/kiss/repo/wayland
+KISS_PATH=$KISS_PATH:/var/db/kiss/repo/community/community
+
